@@ -1,0 +1,113 @@
+@font-face{
+     font-family: newfont;
+     src:url("fonts/Acme-Regular.ttf");
+}
+ body{
+     background-color: #c9cccf;
+     background-image: url(Untitled-1.png);
+     font-family: newfont;
+     color:#133558;
+     font-size: 21px;
+     text-shadow: 1px 1px gray;
+}
+ .container{
+     margin: 0 auto;
+     width: 80%;
+     display: grid;
+     grid-gap: 13px;
+     grid-template-rows: 10vw 25vw 10vw ;
+     grid-template-areas:"computerarea . computerscore" "deck tablecards round" "playercards . playerscore";
+}
+ .computercards{
+     grid-area: computerarea;
+}
+ .computercards img,.deck img,.tablecards img,.playercards img{
+     width: 90px;
+     height: 130px;
+}
+ .computerscore,.playerscore{
+     height: 100px;
+     width: 150px;
+     margin-top: 15px;
+     padding: 14px;
+     border: 2px solid #435970;
+     outline: 2px solid #d0b3b3;
+     box-shadow: 2px ;
+     background-color: whitesmoke;
+}
+ .computerscore{
+     grid-area: computerscore;
+}
+ .playerscore{
+     grid-area: playerscore;
+}
+ .deck{
+     grid-area: deck;
+     width: 20vw;
+}
+ .deck img:nth-child(2){
+     position: relative;
+     right: 100px;
+     top:10px;
+}
+ .tablecards{
+     grid-area: tablecards;
+     width: 30vw;
+}
+
+ .round{
+     grid-area: round;
+     height: 100px;
+     width: 150px;
+     margin-top: 15px;
+     padding: 14px;
+     border: 2px solid #435970;
+     outline: 2px solid #d0b3b3;
+     box-shadow: 2px ;
+     background-color: whitesmoke;
+}
+ .playercards{
+     grid-area: playercards;
+}
+.playercards img{
+     transition: width 2s, height 2s;
+    transition-timing-function: linear;
+}
+.playercards img,.tablecards img,.computercards img{
+    padding: 5px;
+}
+.playercards img:hover{
+    border: 1px solid #435970;
+    box-shadow: 2px -2px 2px white, -2px 2px 2px white;
+}
+.playercards img:active{
+   width: 0;
+    height: 0;
+    
+    
+}
+   
+
+ .cards img{
+     display: none;
+     width: 110px;
+     height: 150px;
+   
+    
+}
+ .realcards{
+     display: none;
+}
+
+ #d{
+     width: 80px;
+     height: 40px;
+     background-color:#435970 ;
+     color: white;
+     font-size: 20px;
+     border: 2px solid white;
+     border-radius: 6px;
+     
+}
+ 
+ 

@@ -1,0 +1,279 @@
+          var valplayer=$(this).attr("val");
+/*
+          valplayer=parseInt(valplayer);
+*/
+          var typeplayer=$(this).attr("type");
+                   var flag=false;
+            for(var i=0;i<$(".tablecards img").length;i++){
+             var valtable=$(".tablecards img").eq(i).attr("val");
+                
+                 if(valplayer==valtable){
+                     flag=true;
+                 
+                 }
+             
+             }
+                
+                  if(flag==false){
+                      
+                  var myimg= $("<img>");
+                  myimg.attr("src",$(this).attr("src"));
+                  myimg.attr("val",$(this).attr("val"));
+                  myimg.attr("type",$(this).attr("type"));
+
+
+                  $(".tablecards").append(myimg);
+                  $(this).attr("src"," ");
+                  $(this).attr("val"," ");
+                  $(this).attr("type"," ");
+                  }
+        
+            
+            
+            for(var i=0;i<$(".tablecards img").length;i++){
+              var valtable=$(".tablecards img").eq(i).attr("val");
+                var len=$(".tablecards img").length;
+                if(valplayer=="j"||(valplayer==7&&typeplayer=="diamonds"))
+                   {
+                     $(this).attr("src"," ");
+                     $(this).attr("val"," ");
+                     $(this).attr("type"," ");
+                     score+=($(".tablecards img").length);
+
+                    $("#myscore").html(score);
+                    $(".tablecards img").remove();
+                    }
+                    else if(valplayer==valtable){
+                         if(len==1){
+                             $(this).attr("src"," ");
+                             $(this).attr("val"," ");
+                             $(this).attr("type"," ");
+                             score+=10;
+                             $("#myscore").html(score);
+                             $(".tablecards img").remove();
+
+
+                         }
+                         else{
+                             $(this).attr("src"," ");
+                             $(this).attr("val"," ");
+                             $(this).attr("type"," ");
+                             $(".tablecards img").eq(i).remove();
+                             
+                              
+                             score+=2;
+                             
+                             $("#myscore").html(score);
+
+                     }
+                     
+                     }
+            
+            }
+            
+            
+            
+            
+          
+       
+            
+        
+ 
+                 
+// ----------------------------------------------------------------------           
+/* If the same card exists on the table*/
+
+/*for(var i=0;i<$(".tablecards img").length;i++){
+    var valtable=$(".tablecards img").eq(i).attr("val");
+    valtable=parseInt(valtable)*/
+  
+  /*  var len=$(".tablecards img").length;
+                
+        if(valplayer==valtable){
+          if(len==1){
+             $(this).attr("src"," ");
+             $(this).attr("val"," ");
+             $(this).attr("type"," ");
+             score+=11;
+             $("#myscore").html(score);
+             $(".tablecards img").remove();
+
+
+          }
+        else
+        {
+         $(this).attr("src"," ");
+         $(this).attr("val"," ");
+         $(this).attr("type"," ");
+         $(".tablecards img").eq(i).remove();
+         score+=2;
+         $("#myscore").html(score);
+
+         }
+       }
+     }*/
+            
+            
+ /*If the played card doesn't capture any cards,then it  remains on the table
+            
+            var flag=false;
+            for(var i=0;i<$(".tablecards img").length;i++){
+             var valtable=$(".tablecards img").eq(i).attr("val");
+                
+                 if(valplayer==valtable){
+                     flag=true;
+                     
+                 }
+                break;
+             }
+                
+                  if(flag==false){
+                      
+                  var myimg= $("<img>");
+                  myimg.attr("src",$(this).attr("src"));
+                  myimg.attr("val",$(this).attr("val"));
+                  myimg.attr("type",$(this).attr("type"));
+
+
+                  $(".tablecards").append(myimg);
+                  $(this).attr("src"," ");
+                  $(this).attr("val"," ");
+                  $(this).attr("type"," ");
+                  }  */   
+/*
+---------------------------------------------------------------------------    
+*/
+    
+    
+    
+    
+    
+/*for(var i=0;i<$(".tablecards img").length;i++){
+  if(valplayer==11||(valplayer==7&&typeplayer=="diamonds"))
+    {
+        $(this).attr("src"," ");
+        $(this).attr("val"," ");
+        $(this).attr("type"," ");
+        score+=($(".tablecards img").length)+1;
+
+        $("#myscore").html(score);
+        $(".tablecards img").remove();
+
+     }
+                 
+   else if(valplayer!=12&&valplayer!=13)
+   {
+                   
+       for(var j=1;j<$(".tablecards img").length;j++)
+       {
+           var valtable=$(".tablecards img").eq(i).attr("val");
+           valtable=parseInt(valtable);
+
+           var valtable2=$(".tablecards img").eq(j).attr("val");
+           valtable2= parseInt(valtable2);
+
+           if(valplayer==(valtable+valtable2))
+           {
+                     $(this).attr("src"," ");
+                     $(this).attr("val"," ");
+                     $(this).attr("type"," ");
+                     $(".tablecards img").eq(i).remove();
+
+                      if( $(".tablecards img").eq(j-1).attr("val")==valtable2)
+                      {
+                         $(".tablecards img").eq(j-1).remove();
+                      }
+                      if($(".tablecards img").length==1){
+                          score+=2;
+                       }
+                       else if($(".tablecards img").length==2){
+                       score+=3;
+
+               }
+               else if($(".tablecards img").length==0){
+                   score+=11;
+               }*/
+
+
+                 /*    $("#myscore").html(score);
+          }
+       }              
+   }                
+}
+         for(var i=0;i<$(".tablecards img").length;i++){
+              var valtable=$(".tablecards img").eq(i).attr("val");
+              valtable=parseInt(valtable)
+
+               var len=$(".tablecards img").length;
+               
+                     if(valplayer==valtable){
+                         if(len==1){
+                             $(this).attr("src"," ");
+                             $(this).attr("val"," ");
+                             $(this).attr("type"," ");
+                             score+=11;
+                             $("#myscore").html(score);
+                             $(".tablecards img").remove();
+
+
+                         }
+                         else{
+                             $(this).attr("src"," ");
+                             $(this).attr("val"," ");
+                             $(this).attr("type"," ");
+                             $(".tablecards img").eq(i).remove();
+                             
+                              
+                             score+=2;
+                             
+                             $("#myscore").html(score);
+
+                     }
+                     }
+                     }*/
+          
+                           
+              /*if((valplayer!=valtable&&valplayer!=11)&&(valplayer!=valtable&&!(typeplayer=="diamonds"&&valplayer==7))){
+                  if(valplayer==valtable){};
+                  var myimg= $("<img>");
+                  myimg.attr("src",$(this).attr("src"));
+                  myimg.attr("val",$(this).attr("val"));
+                  myimg.attr("type",$(this).attr("type"));
+
+
+                  $(".tablecards").append(myimg);
+                  $(this).attr("src"," ");
+                  $(this).attr("val"," ");
+                  $(this).attr("type"," ");
+                  
+                 console.log( $(".tablecards img").length)
+
+                }
+              */
+/*
+                  var flag=false;
+            for(var i=0;i<$(".tablecards img").length;i++){
+             var valtable=$(".tablecards img").eq(i).attr("val");
+                
+                 if(valplayer==valtable){
+                     flag=true;
+                     
+                 }
+             
+             }
+                
+                  if(flag==false){
+                      
+                  var myimg= $("<img>");
+                  myimg.attr("src",$(this).attr("src"));
+                  myimg.attr("val",$(this).attr("val"));
+                  myimg.attr("type",$(this).attr("type"));
+
+
+                  $(".tablecards").append(myimg);
+                  $(this).attr("src"," ");
+                  $(this).attr("val"," ");
+                  $(this).attr("type"," ");
+                  }  */
+                    
+         
